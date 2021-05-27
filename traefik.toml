@@ -1,0 +1,15 @@
+logLevel = "DEBUG"
+
+defaultEntryPoints = ["http", "https"]
+
+[entryPoints]
+    [entryPoints.http]
+        address = ":80"
+
+[api]
+    dashboard = true
+    insecure = true
+
+[providers.docker]
+    watch = true
+    network = "common-traefik"
